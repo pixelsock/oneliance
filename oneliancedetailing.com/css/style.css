@@ -1,0 +1,101 @@
+/*!
+ * Atkell Creative (atkellcreative.com)
+ * Copyright 2011-2015 Atkell Creative
+ *
+ */
+body{
+  background-image: url("/img/cream_pixels.png");
+  color: #333;
+}
+
+.masthead img {
+  margin: 0 auto;
+}
+
+.masthead {
+  margin-top: 40px;
+}
+
+
+.jumbotron {
+  text-align: center;
+  padding-top: 75px;
+  background: none;
+}
+
+.jumbotron p {
+    font-weight: 300 !important;
+}
+
+.jumbotron h1 {
+  color: #72d54a;
+}
+
+#logo-img {
+    max-width: 480px;
+}
+
+footer {
+  float: right;
+  font-size: 12px;
+  margin-top: 25px;
+  margin-right: 5px;
+}
+
+footer p {
+  color: #777;
+}
+
+#mc_embed_signup .mc-field-group input {
+    border: 1px solid #e1e1e3;
+    border-radius: 6px;
+}
+
+#mc_embed_signup {
+  background: none repeat scroll 0 0 #fff !important;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
+}
+
+#mc_embed_signup .button {
+  background-color: #72d54a !important;
+}
+
+.required.email.mce_inline_error, #mc_embed_signup .mc-field-group input {
+  color: #333 !important;
+}
+
+#mc_embed_signup .mc-field-group input {
+  margin-top: 10px;
+  padding-bottom: 7px !important;
+  padding-top: 10px !important;
+}
+
+#mc_embed_signup h2 {
+  font-weight: normal !important;
+}
+
+label {
+  font-weight: 500;
+}
+
+#mc_embed_signup div#mce-responses {
+  margin-bottom: 15px;
+  margin: 0 !important;
+  width: 95% !important;  
+}
+
+#mc_embed_signup div.response {
+  width: 100% !important;
+  text-align: center !important;
+  padding: 0px;
+}
+
+
+
+
+@media (min-width: 768px) {
+.jumbotron {
+  padding-top: 48px;
+}
+}

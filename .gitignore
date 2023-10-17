@@ -1,0 +1,32 @@
+# .gitignore
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore node modules
+node_modules/
+
+# Ignore IDE specific files
+.idea/
+*.sublime*
+.vscode/
+
+# Ignore log files
+*.log
+
+# Ignore build files
+dist/
+
+# Ignore Sass cache
+.sass-cache/
+
+# Ignore temporary files
+*.tmp
+*.temp
+
+
+# Ignore old and unused files
+old_8-20-15/
+unused pages/
+working/

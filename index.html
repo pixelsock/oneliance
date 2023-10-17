@@ -1,0 +1,393 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162388530-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-162388530-1');
+    </script>
+    <script>
+        window.onload = function () {
+
+            fetch('components/ourCustomers/combined.csv')
+                .then(response => response.text())
+                .then(data => {
+                    let rows = data.split('\n');
+                    let htmlTags = '';
+                    for (let i = 1; i < rows.length; i++) { // Skip the header row
+                        let columns = rows[i].split(',');
+                        let client_name = columns[0];
+                        let img_src = columns[1];
+                        let img_alt = columns[2];
+                        let img_width = columns[3];
+                        let href = columns[4];
+                        htmlTags += '<a target="_blank" href="' + href + '" class="grid-item">';
+                        htmlTags += '<img alt="' + img_alt + '" src="' + img_src + '">';
+                        htmlTags += '</a>';
+                    }
+                    document.getElementById('our-customers').innerHTML = htmlTags;
+                });
+        }
+    </script>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skilled Labor – Commercial Cleaning in Charlotte, NC | Oneliance</title>
+    <link rel="stylesheet" href="css/foundation.css?v2.3" />
+    <link rel="stylesheet" href="css/fontello.css">
+    <link rel="stylesheet" href="css/animation.css">
+
+    <script src="js/responsive-nav.js"></script>
+    <link rel="stylesheet" href="css/responsive-grid.css" />
+    <link rel="stylesheet" href="css/main.css?v1.1">
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300' rel='stylesheet' type='text/css'>
+    <link rel="shortcut icon" href="/img/favicon.ico" />
+    <link rel="stylesheet" href="css/responsive-nav.css">
+    <link rel="stylesheet" href="css/nav-styles.css">
+    <script src="js/vendor/modernizr.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/ajax-contact.js"></script>
+    <script src="js/vendor/modernizr-2.7.1.min.js"></script>
+    <meta name="description"
+        content="Oneliance is the premier provider for post construction cleaning, general labor services, and skilled labor services in Charlotte, NC">
+
+</head>
+
+<body>
+
+    <div class="headwrap contain-to-grid sticky">
+        <div class="row">
+            <a class="nav-logo" href="http://oneliance.com">
+                <img class="main-logo" alt="" src="/img/main-logo.png">
+            </a>
+            <nav class="nav-collapse" data-topbar role="navigation" data-options="sticky_on: large">
+                <ul>
+                    <li><a href="/">HOME</a></li>
+                    <li><a href="/about">ABOUT</a></li>
+                    <li><a href="#services">SERVICES</a></li>
+                    <!--<li><a href="employment">EMPLOYMENT</a></li>
+          <li><a href="partners">PARTNERS</a></li>
+          <li><a href="contact">CONTACT</a></li>
+          <li><a href="contact" class="btn-nav">FREE ESTIMATE</a></li>-->
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <!--
+  <div class="row">
+  <div class="large-12 columns">
+    <div class="sticky fixed">
+  <nav data-options="sticky_on: large" role="navigation" data-topbar="" class="top-bar">
+  <ul class="title-area">
+    <!-- Title Area -->
+        <!--    <li class="name">
+      <img class="main-logo" alt="" src="/img/main-logo.png">
+    </li>
+    <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+        <!--    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+  </ul>
+
+
+<section class="top-bar-section">
+
+    <!-- Right Nav Section -->
+        <!--    <ul class="right">
+      <li class="divider hide-for-small"></li>
+      <li><a href="http://google.com">ABOUT</a></li>
+      <li><a href="http://google.com">SERVICES</a></li>
+      <li><a href="http://google.com">PARTNERS</a></li>
+      <li><a href="http://google.com">CONTACT</a></li>
+      <li><a href="http://google.com" class="btn-nav">FREE ESTIMATE</a></li>
+    </ul>
+  </section></nav>
+</div>
+
+<p>  </p></div>
+</div>
+
+<!--<div class="nav-wrap">
+	<div class="row">
+  		<div class="large-12 columns">
+			<div class="contain-to-grid sticky">
+  				<nav class="top-bar" data-topbar role="navigation" data-options="sticky_on: large">
+					<ul class="title-area">
+              			<!--<li class="name">
+               			<h1>
+                 			<a href="#">
+                   				<img class="main-logo" alt="" src="/img/main-logo.png">
+                  			</a>
+                		</h1>
+              			</li>-->
+        <!--              			<li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
+            		</ul>
+            		<section class="top-bar-section">
+              			<ul class="left">
+                			<li class="divider"></li>
+                			<li><a href="about">About Us</a></li>
+                			<li class="divider"></li>
+                			<li><a href="services">Services</a></li>
+                			<li class="divider"></li>
+                			<li><a href="contact">Contact Us</a></li>
+              			</ul>
+            		</section>
+      			</nav>
+  			</div><!--sticky-->
+        <!--    	</div><!--columns-->
+        <!--  	</div> <!--row-->
+        <!-- </div> <!--nav-wrap-->
+
+
+
+        <div id="cover-image">
+            <p></p>
+        </div>
+
+
+
+        <!--<div id="cover-image">
+  <div class="slider-text">
+    <h1>Charlotte's premium building and property maintenance group.</h1>
+  </div>
+    </div></div>-->
+
+        <div class="row headline">
+            <h2 style="max-width: 1100px;margin: 0 auto 50px auto;text-align: center;">Oneliance LLC offers the highest
+                quality of streamlined construction, cleaning and staffing services to general contractors in the
+                Southern region. Our goal is to simplify the delivery of exceptional service, to offer highly
+                competitive pricing, and to build relationships based on teamwork, family values and respect.</h2>
+                <div class="city-text">
+                    We’ve got you covered in:<br />
+                    AUSTIN <img alt="green diamond" src="/img/green_diamond.svg" width="8" class="diamond"> CHARLESTON <img
+                        alt="green diamond" src="/img/green_diamond.svg" width="8" class="diamond"> CHARLOTTE <img
+                        alt="green diamond" src="/img/green_diamond.svg" width="8" class="diamond"> DALLAS <img
+                        alt="green diamond" src="/img/green_diamond.svg" width="8" class="diamond"> DENVER <img
+                        alt="green diamond" src="/img/green_diamond.svg" width="8" class="diamond"> FT. LAUDERDALE <img
+                        alt="green diamond" src="/img/green_diamond.svg" width="8" class="diamond"> HOUSTON <img
+                        alt="green diamond" src="/img/green_diamond.svg" width="8" class="diamond"> MIAMI <img
+                        alt="green diamond" src="/img/green_diamond.svg" width="8" class="diamond"> NASHVILLE <img
+                        alt="green diamond" src="/img/green_diamond.svg" width="8" class="diamond"> ORLANDO <img
+                        alt="green diamond" src="/img/green_diamond.svg" width="8" class="diamond"> RALEIGH/DURHAM <img
+                        alt="green diamond" src="/img/green_diamond.svg" width="8" class="diamond"> TAMPA <img
+                        alt="green diamond" src="/img/green_diamond.svg" width="8" class="diamond"> WEST PALM BEACH <img
+                        alt="green diamond" src="/img/green_diamond.svg" width="8" class="diamond"> WINSTON-SALEM
+                </div>
+            <!--<div class="app-btn">
+             <a id="" class="btn-hero" href="services">View all services</a>
+	</div>-->
+            <!--<div class="large-2 medium-6 columns left"></div>-->
+        </div>
+
+        <div id="services" class="services-overview">
+            <div class="row">
+                <div class="large-6 columns services cleaning">
+                    <img src="/img/construction.png" />
+                    <h5>Construction Cleaning</h5>
+                    <p>Oneliance is your one-stop shop for turnkey Construction Site Services, including
+                        post-construction cleaning and pressure washing.<br /></p>
+                    <div class="btn-services">
+                        <a id="" href="/construction-sites">Learn more</a>
+                    </div>
+                </div>
+                <div class="large-6 columns services disinfecting">
+                    <!-- <div class="new">NEW</div> Removed 'NEW' -->
+                    <img src="/img/cleaning.png" />
+                    <h5>Disinfecting Cleaning</h5>
+                    <p>Oneliance is now offering two-step disinfecting cleaning and sanitizing cleaning in Atlanta,
+                        Charleston, Charlotte, Dallas, Nashville, Raleigh/Durham, and Winston-Salem.</p>
+                    <div class="btn-services">
+                        <a id="" href="/disinfecting-cleaning">Learn more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="large-6 columns services skilled-labor">
+                    <img src="/img/skilled-labor.png" />
+                    <h5>Skilled Labor</h5>
+                    <p>Oneliance supplies skilled laborers for sheet rock installation and repair, painting, carpeting,
+                        and demolition.</p>
+                    <div class="btn-services">
+                        <a id="" href="/staffing">Learn more</a>
+                    </div>
+                </div>
+                <div class="large-6 columns services maintenance">
+                    <img src="/img/maintenance.png" />
+                    <h5>Punch List Work</h5>
+                    <p>Oneliance supplies skilled laborers specializing in punch list work to complete your project.</p>
+                    <div class="btn-services">
+                        <a id="" href="/staffing">Learn more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="large-6 columns services staffing">
+                    <img src="/img/staffing.png" />
+                    <h5>Construction Staffing</h5>
+                    <p>Oneliance can supply project managers, superintendents, lift operators, flaggers, and other
+                        construction professionals .</p>
+                    <div class="btn-services">
+                        <a id="" href="/staffing">Learn more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row  row-padding">
+            <h4 style="margin: 60px 0 40px 0;text-align:center;">Our Customers</h4>
+            <div id="our-customers"></div>
+        </div>
+
+
+        <!--
+<div class="row border content">
+    <div class="large-4 columns testimonial-preview">
+      <img src="/img/staffing.png"/>
+      <h5>Rory McIlroy</h5>
+      	<h6>ASPEN HEIGHTS, VP OF GLOBAL OPS</h6>
+        <p>“Oneliance has been a partner of ours for over two decades. It’s pretty simple: With Oneliance, we can sleep at night.”</p>
+    </div>
+    <div class="large-4 columns testimonial-preview">
+      <img src="/img/staffing.png"/>
+      <h5>Jordan Spieth</h5>
+        <h6>JLB PARTNERS, PROPERTY MANAGER</h6>
+        <p>“Oneliance has been a partner of ours for over two decades. It’s pretty simple: With Oneliance, we can sleep at night.”</p>
+    </div>
+    <div class="large-4 columns testimonial-preview">
+      <img src="/img/staffing.png"/>
+      <h5>Phil Mickelson</h5>
+        <h6>SAMET CORPORATION, PRESIDENT</h6>
+        <p>“Oneliance has been a partner of ours for over two decades. It’s pretty simple: With Oneliance, we can sleep at night.”</p>
+    </div>
+  </div> -->
+
+        <div class="about-why">
+            <div class="row">
+                <div class="large-5 medium-12 columns right" style="margin-bottom:30px;margin-top:30px;">
+                    <img src="/img/van-jobsite.jpg" />
+                </div>
+
+                <div class="large-7 medium-12 columns left" style="text-align:left;">
+                    <h3>Why Oneliance?</h3>
+                    <p style="text-align:left;">Oneliance is the premier post-construction cleaning, temporary staffing
+                        and skilled labor provider in the South. With its home office in Charlotte, NC, Oneliance
+                        provides services to many of the largest commercial contractors in the area.</p><br>
+                    <p style="text-align:left;">Because we offer such a wide range of services, from construction
+                        cleaning and general staffing to pressure washing and skilled labor, we can streamline our
+                        delivery and simplify your project execution.</a></p><br>
+                    <p style="text-align:left;">If you want to save time and gain peace of mind by knowing that your job
+                        will be completed at a competitive price, call
+                        Oneliance.<!--You may fill out this <a id="" href="contact">brief form to receive a free consultation</a>, or contact us directly for more information.-->
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!--<div class="footer-cta">
+	<div class="row">
+		<div class="large-3 columns p-right">
+			<p>Want to learn more?</p>
+		</div>
+		<div class="large-6 columns btn-footer-cta">
+			<a href="contact">Request a free consultation</a>
+		</div>
+		<div class="large-6 columns phone-foot">
+    		<p>Call <a href="tel:704-900-0569">704-900-0569</a></p>
+    	</div>
+    </div>
+</div>
+</div>-->
+
+        <div class="footer">
+            <footer class="row">
+                <div class="large-3 columns">
+                    <a href="http://oneliance.com"><img class="white-logo" alt="" src="/img/white-logo.png"></a>
+                </div>
+                <div class="large-2 medium-3 small-12 columns">
+                    <ul class="footer-links">
+                        <li><a href="index">Home</a></li>
+                    </ul>
+                </div>
+                <div class="large-2 medium-3 small-12 columns">
+                    <ul class="footer-links">
+                        <li><a href="about">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="large-2 medium-3 small-12 columns">
+                    <ul class="footer-links">
+                        <li><a href="#services">Services</a></li>
+                    </ul>
+                </div>
+                <div class="large-3 medium-3 small-12 columns">
+                    <p style="padding-top: 23px;"><a href="tel:704-900-0569">704-900-0569</a></p>
+                </div>
+                <!--<div class="large-2 medium-3 small-12 columns">
+          <ul class="footer-links">
+            <li><a href="contact">Contact Us</a></li>
+          </ul>
+    </div>
+    <div class="large-3 medium-3 small-12 columns">
+          <div class="socialfollow">
+            <h6>Keep in Touch: <a class="facebook" href="http://facebook.com/oneliance" target="_blank"><i class="icon-facebook"></i></a>
+            <a class="twitter" href="https://twitter.com/oneliancegroup" target="_blank"><i class="icon-twitter"></i></a>
+            <a class="gplus" href="http://facebook.com/oneliance" target="_blank"><i class="icon-gplus"></i></a>
+            <a class="instagram" href="http://instagram.com/oneliancegroup" target="_blank"><i class="icon-instagram"></i></a></h6>
+          </div>
+    </div>-->
+            </footer>
+        </div>
+
+        <div class="bottom-bar">
+            <div class="row">
+                <h6 style="text-align:center;">
+                    <!--<a href="site-map">Site Map</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<a href="privacy">Privacy</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;-->©
+                    <script type="text/javascript">document.write(new Date().getFullYear());</script> Oneliance LLC, All
+                    rights reserved.
+                </h6>
+            </div>
+        </div>
+
+
+
+        <script src="js/vendor/jquery.js"></script>
+        <script src="js/foundation.min.js"></script>
+        <script>
+            $(document).foundation();
+        </script>
+        <!-- it works the same with all jquery version from 1.x to 2.x -->
+        <script type="text/javascript" src="http://oneliance.com/js/jquery-1.9.1.min.js"></script>
+
+
+        <script>
+            var navigation = responsiveNav(".nav-collapse", {
+                animate: true,                    // Boolean: Use CSS3 transitions, true or false
+                transition: 284,                  // Integer: Speed of the transition, in milliseconds
+                label: "Menu",                    // String: Label for the navigation toggle
+                insert: "after",                  // String: Insert the toggle before or after the navigation
+                customToggle: "",                 // Selector: Specify the ID of a custom toggle
+                closeOnNavClick: false,           // Boolean: Close the navigation when one of the links are clicked
+                openPos: "relative",              // String: Position of the opened nav, relative or static
+                navClass: "nav-collapse",         // String: Default CSS class. If changed, you need to edit the CSS too!
+                navActiveClass: "js-nav-active",  // String: Class that is added to <html> element when nav is active
+                jsClass: "js",                    // String: 'JS enabled' class which is added to <html> element
+                init: function () { },               // Function: Init callback
+                open: function () { },               // Function: Open callback
+                close: function () { }               // Function: Close callback
+            });
+        </script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+        <script src="js/imagesloaded.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/enquire.js/2.1.6/enquire.min.js"></script>
+        <script src="_main.js"></script>
+        <script src="jquery-2.1.0.min.js"></script>
+        <script src="app.js"></script>
+</body>
+
+</html>
