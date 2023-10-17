@@ -25,7 +25,6 @@ dist/
 *.tmp
 *.temp
 
-
 # Ignore old and unused files
 old_8-20-15/
 unused pages/
